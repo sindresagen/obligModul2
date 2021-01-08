@@ -1,0 +1,14 @@
+Nettside for vinreviews, mini-versjon av oppdrag fra bror.
+
+    -Kort liste med viner, evt vinslott.
+    -Kan legge til i lista med nye viner/slott.
+    -Kan fjerne fra lista.
+    -Kan redigere/endre på lista.
+    -Startside og side med liste?
+
+Min bror er vinjournalist/skribent, en av de største i norden, og har en gammel blogg han skriver inn notatene sine på så 
+andre kan få anbefalinger, her er det tusenvis av artikler, så i obligen blir det nok at jeg trekker ut et fåtall, 
+så kan jeg heller bygge på den siden senere hvis jeg ikke gjør alt fra scratch igjen på et senere tidspunkt.
+Tenker at enkleste måte å gjøre dette på blir at hver enkelt vin er et objekt, med navn, type, pris, årstall osv. 
+Litt som i en codealong vi hadde der Linn og Joakim lagde en quote generator, hvor hver quote var ett objekt med forfatter, 
+selve quoten og opprinnelse.
