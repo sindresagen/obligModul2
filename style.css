@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(3, 19, 24);
+}
+h1 {
+    text-align: center;
+    position: relative;
+    top: 10vh;
+}
+
+* {
+    color: rgb(212, 208, 208);
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+
+.sideNote {
+    position: relative;
+    left: 70vw;
+    top: 20vh;
+}
+
+.mainNote {
+    position: relative;
+    text-align: center;
+    top: 1vh;
+    padding: 100px;
+}
+
+.backBtn {
+    font-weight: bold;
+    padding: 10px;
+}
+
+#bilde {
+    position: relative;
+    width: 35vw;
+    height: 35vh;
+    background-position: center;
+    left: 32%;
+}
