@@ -38,3 +38,21 @@ h1 {
     background-position: center;
     left: 35%;
 }
+
+table, tr, th, td {
+    position: relative;
+    text-align: center;
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+
+.editBtns {
+    color: black;
+    cursor: pointer;
+}
+
+.userLink {
+    color: rgb(74, 149, 211);
+    font-weight: bold;
+    text-decoration: underline;
+}
