@@ -100,7 +100,7 @@ table, tr, th, td {
 
 #sideNote {
     position: relative;
-    top: -6vh;
+    top: -10vh;
     left: 10vw;
     width: 250px;
 }
@@ -117,7 +117,7 @@ table, tr, th, td {
 
 .addSideNote {
     position: relative;
-    top: -6vh;
+    top: -10vh;
     left: 10vw;
     color: black;
     cursor: pointer;
