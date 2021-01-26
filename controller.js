@@ -9,9 +9,10 @@ function deleteBtn(index) {
 
 function addReview() {
     let wineRegionInput = document.getElementById('regionInput');
-    let wineCastleInput;
-    let wineYearInput;
-    let winePriceInput;
-    let wineReviewInput;
-    let winePictureInput;
+    let wineCastleInput = document.getElementById('castleInput');
+    let wineYearInput = document.getElementById('yearInput');
+    let winePriceInput = document.getElementById('priceInput');
+    let wineReviewInput = document.getElementById('mainNoteInput');
+    let wineSideNoteInput = document.getElementById('sideNoteInput');
+    let winePictureInput = document.getElementById('pictureInput');
 }

@@ -44,20 +44,12 @@ listView();
 
     function userView() {
         userHTML = `<div class="backBtn" onclick="listView()">Back to admin page</div>
-        <h1>Chateau Dudon</h1>
-        <p class="sideNote">Some text some text some text some text <br /> some text some text
-            some text some text <br /> some text some text some text
-            some text <br /> some text some text some text some text
-            <br />
-            <br />
-            Some text some text some text some text <br /> some text some text
-            some text some text <br /> some text some text some text
-            some text <br /> some text some text some text some text</p>
+        <h1>${model.existing[0].castle}</h1>
+        <p class="sideNote">${model.existing[0].sideNote}</p>
 
-            <div><img id="bilde" src="oblig3.jpg"></div>
+            <div><img id="bilde" src="${model.existing[0].picture}"></div>
 
-        <p class="mainNote">APR 19 Ruby. Blueberries, light anise and cassis nose. 
-            Fresh acidity, ripe tannins, dark fruity, spicy, blueberries, good length. 85. 
+        <p class="mainNote">${model.existing[0].mainNote}
             Some text some text some text some text some text some text some text some text 
             some text some text some text some text some text some text some text some text 
             some text some text some text some text some text some text some text some text 
@@ -89,6 +81,7 @@ listView();
         <input id="mainNote" type="text" placeholder="Main notes"><button class="addMainNote">Add</button>
         <input id="sideNote" type="text" placeholder="Side note"><button class="addSideNote">Add</button>
         <img id="imgPlaceholder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/PlaceholderLC.png/600px-PlaceholderLC.png">
+        <input id="pictureInput" class="picInputField" placeholder="Picture link">
         <button id="addImage">+</button>
         `;
 
