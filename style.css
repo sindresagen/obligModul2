@@ -48,10 +48,14 @@ h2 {
 table, tr, th, td {
     position: relative;
     text-align: center;
-    border: 1px solid grey;
+    border: 1px solid lightgrey;
     border-collapse: collapse;
     /* left: 18vw;
     top: 18vh; */
+}
+
+th, td {
+    padding: 4px;
 }
 
 .editBtns {
@@ -73,6 +77,7 @@ table, tr, th, td {
     color: rgb(74, 149, 211);
     font-weight: bold;
     text-decoration: underline;
+    cursor: pointer;
 }
 
 .inputField {

@@ -35,8 +35,8 @@ listView();
             <td>${wines.year}</td>
             <td>${wines.price}</td>
             <td><a class="userLink" onclick="userView()">Read</a></td>
-            <td><button class="editBtns" onclick="editBtn()">Edit</button></td>
-            <td><button class="deleteBtns" onclick="deleteBtn()">X</button></td>
+            <td><button class="editBtns" onclick="editBtn(${i})">Edit</button></td>
+            <td><button class="deleteBtns" onclick="deleteBtn(${i})">X</button></td>
         </tr>
         `;
     }    

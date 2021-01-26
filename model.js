@@ -27,8 +27,8 @@ const model = {
     newNotes: [
 
         {
-            regionTxt: '',
-            castleTxt: '',
+            region: '',
+            castle: '',
             year: '',
             price: '',
             mainNoteTxt: '',
