@@ -58,9 +58,11 @@
           });
 
           QUnit.test('funksjon takler ugyldig input bra, edit', function(assert) {
-            
-            let actual;
-            let expected;
+            model.newNotes[0].region = '';
+            let førEdit = model.existing[0].region;
+            editReview(0);
+            let actual = model.existing[0].region;
+            let expected = førEdit;
             assert.equal(actual, expected);
           });
       </script>
