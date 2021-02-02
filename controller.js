@@ -9,7 +9,7 @@ function addReview() {
     let wineRegionInput = model.newNotes[0].region;
     let wineCastleInput = model.newNotes[0].castle;
     let wineYearInput = model.newNotes[0].year;
-    let winePriceInput = model.newNotes[0].price;
+    let winePriceInput = model.newNotes[0].price + 'kr';
     let wineReviewInput = model.newNotes[0].mainNote;
     let wineSideNoteInput = model.newNotes[0].sideNote;
     let winePictureInput = model.newNotes[0].picture;

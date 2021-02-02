@@ -18,7 +18,7 @@
 
           }
         
-          QUnit.test('funksjon gjør som den skal 1', function(assert) {
+          QUnit.test('funksjon gjør som den skal, legge til', function(assert) {
             model.newNotes[0].region = 'hei';
             model.newNotes[0].castle = 'hei';
             model.newNotes[0].year = 'hei';
@@ -33,7 +33,7 @@
             assert.equal(actual, expected);
           });
 
-          QUnit.test('funksjon gjør som den skal med en blank verdi', function(assert) {
+          QUnit.test('funksjon takler en blank verdi, legge til', function(assert) {
             model.newNotes[0].region = '';
             model.newNotes[0].castle = 'hei';
             model.newNotes[0].year = 'hei';
@@ -48,14 +48,18 @@
             assert.equal(actual, expected);
           });
 
-          QUnit.test('funksjon takler ugyldig input bra 1', function(assert) {
-            let acutal;
-            let expected;
+          QUnit.test('funksjon gjør som den skal, sletting', function(assert) {
+            // model.existing[0];
+            let lengdeFørSlettet = model.existing.length;
+            deleteBtn();
+            let actual = model.existing.length;
+            let expected = lengdeFørSlettet - 1;
             assert.equal(actual, expected);
           });
 
-          QUnit.test('funksjon takler ugyldig input bra 2', function(assert) {
-            let acutal;
+          QUnit.test('funksjon takler ugyldig input bra, edit', function(assert) {
+            
+            let actual;
             let expected;
             assert.equal(actual, expected);
           });
