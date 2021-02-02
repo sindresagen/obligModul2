@@ -1,6 +1,4 @@
-function editBtn() {
-    console.log("edit this shid");
-}
+
 
 function deleteBtn(index) {
     model.existing.splice(index, 1);
@@ -8,22 +6,25 @@ function deleteBtn(index) {
 }
 
 function addReview() {
-    let wineRegionInput = document.getElementById('regionInput');
-    let wineCastleInput = document.getElementById('castleInput');
-    let wineYearInput = document.getElementById('yearInput');
-    let winePriceInput = document.getElementById('priceInput');
-    let wineReviewInput = document.getElementById('mainNote');
-    let wineSideNoteInput = document.getElementById('sideNote');
-    let winePictureInput = document.getElementById('pictureInput');
-
-    model.existing.push({
-        region: wineRegionInput.value,
-        castle: wineCastleInput.value,
-        year: wineYearInput.value,
-        price: winePriceInput.value,
-        mainNote: wineReviewInput.value,
-        sideNote: wineSideNoteInput.value,
-        picture: winePictureInput.value,
+    let wineRegionInput = model.newNotes[0].region;
+    let wineCastleInput = model.newNotes[0].castle;
+    let wineYearInput = model.newNotes[0].year;
+    let winePriceInput = model.newNotes[0].price;
+    let wineReviewInput = model.newNotes[0].mainNote;
+    let wineSideNoteInput = model.newNotes[0].sideNote;
+    let winePictureInput = model.newNotes[0].picture;
+    if (wineRegionInput == '' || wineCastleInput == '' || wineYearInput == '') {
+        console.log('error');
+        return;    
+    } 
+        model.existing.push({
+        region: wineRegionInput,
+        castle: wineCastleInput,
+        year: wineYearInput,
+        price: winePriceInput,
+        mainNote: wineReviewInput,
+        sideNote: wineSideNoteInput,
+        picture: winePictureInput,
 
     });
     listView();
@@ -31,21 +32,14 @@ function addReview() {
 
 function editReview(index) {
     const wine = model.existing[index];
-    let wineRegionInput = document.getElementById('regionInput');
-    let wineCastleInput = document.getElementById('castleInput');
-    let wineYearInput = document.getElementById('yearInput');
-    let winePriceInput = document.getElementById('priceInput');
-    let wineReviewInput = document.getElementById('mainNote');
-    let wineSideNoteInput = document.getElementById('sideNote');
-    let winePictureInput = document.getElementById('pictureInput');
 
-    wine.region = wineRegionInput.value;
-    wine.castle = wineCastleInput.value;
-    wine.year = wineYearInput.value;
-    wine.price = winePriceInput.value;
-    wine.mainNote = wineReviewInput.value;
-    wine.sideNote = wineSideNoteInput.value;
-    wine.picture = winePictureInput.value;
+    wine.region = model.newNotes[0].region == '' ? wine.region : model.newNotes[0].region;
+    wine.castle = model.newNotes[0].castle == '' ? wine.castle : model.newNotes[0].castle;
+    wine.year = model.newNotes[0].year == '' ? wine.year : model.newNotes[0].year;
+    wine.price = model.newNotes[0].price == '' ? wine.price : model.newNotes[0].price;
+    wine.mainNote = model.newNotes[0].mainNote == '' ? wine.mainNote : model.newNotes[0].mainNote;
+    wine.sideNote = model.newNotes[0].sideNote == '' ? wine.sideNote : model.newNotes[0].sideNote;
+    wine.picture = model.newNotes[0].picture == '' ? wine.picture : model.newNotes[0].picture;
 
     listView();
 }

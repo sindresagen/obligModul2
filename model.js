@@ -24,18 +24,18 @@ const model = {
         { region: 'Some region', castle: 'Some castle', year: 'N/A', price: 'N/A' + ' kr', mainNote: '', sideNote: '', picture: 'https://media.discordapp.net/attachments/394567922858721290/804341515283070976/oblig3.jpg?width=901&height=676'},
     ],
 
-    // newNotes: [
+     newNotes: [
 
-    //     {
-    //         region: '',
-    //         castle: '',
-    //         year: '',
-    //         price: '',
-    //         mainNoteTxt: '',
-    //         sideNoteTxt: '',
-    //         notePicture: '',
-    //     }
-    // ],
+        {
+             region: '',
+             castle: '',
+             year: '',
+             price: '',
+             mainNote: '',
+             sideNote: '',
+             picture: '',
+         }
+     ],
 };
 // for (let i = 0; i < model.existing.length; i++){
 //     console.log(model.existing[i]);

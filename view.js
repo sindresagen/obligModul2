@@ -74,14 +74,14 @@ listView();
         newReviewHTML = `
         <div class="backBtn" onclick="listView()">Back to admin page</div>
         <h2>New Review:</h2>
-        <input id="regionInput" class="inputField" type="text" placeholder="Region"> <br />
-        <input id="castleInput" class="inputField" type="text" placeholder="Castle"> <br />
-        <input id="yearInput" class="inputField" type="text" placeholder="Year"> <br />
-        <input id="priceInput" class="inputField" type="text" placeholder="Price"> <br />
-        <input id="mainNote" type="text" placeholder="Main notes">
-        <input id="sideNote" type="text" placeholder="Side note">
+        <input id="regionInput" oninput="model.newNotes[0].region = this.value" class="inputField" type="text" placeholder="Region"> <br />
+        <input id="castleInput" oninput="model.newNotes[0].castle = this.value" class="inputField" type="text" placeholder="Castle"> <br />
+        <input id="yearInput" oninput="model.newNotes[0].year = this.value" class="inputField" type="text" placeholder="Year"> <br />
+        <input id="priceInput" oninput="model.newNotes[0].price = this.value" class="inputField" type="text" placeholder="Price"> <br />
+        <input id="mainNote" oninput="model.newNotes[0].mainNote = this.value" type="text" placeholder="Main notes">
+        <input id="sideNote" oninput="model.newNotes[0].sideNote = this.value" type="text" placeholder="Side note">
         <img id="imgPlaceholder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/PlaceholderLC.png/600px-PlaceholderLC.png">
-        <input id="pictureInput" class="picInputField" placeholder="Picture link">
+        <input id="pictureInput" oninput="model.newNotes[0].picture = this.value" class="picInputField" placeholder="Picture link">
         <button id="addImage">+</button>
         <button class="addNewNote" onclick="addReview()">Add Note</button>
         `;
@@ -94,14 +94,14 @@ listView();
         editViewHTML = `
         <div class="backBtn" onclick="listView()">Back to admin page</div>
         <h2>Edit Review:</h2>
-        <input id="regionInput" class="inputField" type="text" placeholder="Region" value="${wine.region}"> <br />
-        <input id="castleInput" class="inputField" type="text" placeholder="Castle" value="${wine.castle}"> <br />
-        <input id="yearInput" class="inputField" type="text" placeholder="Year" value="${wine.year}"> <br />
-        <input id="priceInput" class="inputField" type="text" placeholder="Price" value="${wine.price}"> <br />
-        <input id="mainNote" type="text" placeholder="Main notes" value="${wine.mainNote}">
-        <input id="sideNote" type="text" placeholder="Side note" value="${wine.sideNote}">
+        <input id="regionInput" oninput="model.newNotes[0].region = this.value" class="inputField" type="text" placeholder="Region" value="${wine.region}"> <br />
+        <input id="castleInput" oninput="model.newNotes[0].castle = this.value" class="inputField" type="text" placeholder="Castle" value="${wine.castle}"> <br />
+        <input id="yearInput" oninput="model.newNotes[0].year = this.value" class="inputField" type="text" placeholder="Year" value="${wine.year}"> <br />
+        <input id="priceInput" oninput="model.newNotes[0].price = this.value" class="inputField" type="text" placeholder="Price" value="${wine.price}"> <br />
+        <input id="mainNote" oninput="model.newNotes[0].mainNote = this.value" type="text" placeholder="Main notes" value="${wine.mainNote}">
+        <input id="sideNote" oninput="model.newNotes[0].sideNote = this.value" type="text" placeholder="Side note" value="${wine.sideNote}">
         <img id="imgPlaceholder" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/PlaceholderLC.png/600px-PlaceholderLC.png">
-        <input id="pictureInput" class="picInputField" placeholder="Picture link" value="${wine.picture}">
+        <input id="pictureInput" oninput="model.newNotes[0].picture = this.value" class="picInputField" placeholder="Picture link" value="${wine.picture}">
         <button id="addImage">+</button>
         <button class="addNewNote" onclick="editReview(${index})">Done edit</button>
         `;
