@@ -17,6 +17,15 @@
           function listView() {
 
           }
+
+          QUnit.test('funksjon gjør som den skal, sletting', function(assert) {
+            // model.existing[0];
+            let lengdeFørSlettet = model.existing.length;
+            deleteBtn(3);
+            let actual = model.existing.length;
+            let expected = lengdeFørSlettet - 1;
+            assert.equal(actual, expected);
+          });
         
           QUnit.test('funksjon gjør som den skal, legge til', function(assert) {
             model.newNotes[0].region = 'hei';
@@ -48,14 +57,7 @@
             assert.equal(actual, expected);
           });
 
-          QUnit.test('funksjon gjør som den skal, sletting', function(assert) {
-            // model.existing[0];
-            let lengdeFørSlettet = model.existing.length;
-            deleteBtn();
-            let actual = model.existing.length;
-            let expected = lengdeFørSlettet - 1;
-            assert.equal(actual, expected);
-          });
+          
 
           QUnit.test('funksjon takler ugyldig input bra, edit', function(assert) {
             model.newNotes[0].region = '';
